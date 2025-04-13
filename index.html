@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tic-Tac-Toe</h1>
+      <p>A modern take on the classic game</p>
+    </div>
+    
+    <div class="game">
+      <div class="game-controls">
+        <div class="player-indicators">
+          <div class="player x-player">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </div>
+          <div class="player o-player">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+          </div>
+        </div>
+        
+        <button id="reset-button" class="reset-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6"></path>
+            <path d="M2.5 12a10 10 0 0 1 17.75-6"></path>
+            <path d="M2.5 22v-6h6"></path>
+            <path d="M21.5 12a10 10 0 0 1-17.75 6"></path>
+          </svg>
+          Reset
+        </button>
+      </div>
+      
+      <div class="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      
+      <div class="game-status">
+        <div class="scores">
+          <div class="score">
+            <div class="score-icon x-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </div>
+            <p id="x-score">0</p>
+          </div>
+          
+          <div class="score">
+            <p class="score-label">Draws</p>
+            <p id="draws">0</p>
+          </div>
+          
+          <div class="score">
+            <div class="score-icon o-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <p id="o-score">0</p>
+          </div>
+        </div>
+        
+        <div id="turn-indicator" class="turn-indicator">
+          <p>Current turn</p>
+          <div class="current-player-icon">
+            <svg id="current-player-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Created with HTML, CSS & JavaScript</p>
+    </footer>
+  </div>
+  
+  <div id="toast" class="toast">
+    <p id="toast-message"></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
